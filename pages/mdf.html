@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Marc Balasch | Mostra de feines</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+  <script>
+        var slideIndex1 = 1;
+     var slideIndex = 1;
+        showDivs1(slideIndex1);
+     showDivs(slideIndex);
+
+        function plusDivs1(n1) {
+            showDivs1(slideIndex1 += n1);
+        }
+     function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs1(n1) {
+            var i;
+            var x = document.getElementsByClassName("mySlides1");
+            if (n1 > x.length) {
+                slideIndex1 = 1
+            }
+            if (n1 < 1) {
+                slideIndex1 = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex1 - 1].style.display = "block";
+        }
+      function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+
+    </script>
+<body>
+    <div id="cont_menu">
+        <ul>
+            <li><a href="../index.html" class="menu_apa">Inici</a></li>
+            <li><a href="cv.html" class="menu_apa">C.V.</a></li>
+            <li><a href="mdf.html" class="menu_apa">Mostra de feines</a></li>
+            <li><a href="cnt.html" class="menu_apa">Contacte</a></li>
+        </ul>
+    </div>
+       <div id="cont_general">
+        <div id="cont_xxss">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter-square"></i></a>
+        </div>
+        <div id="cont_nom">
+            <h1>Mostra de feines</h1>
+        </div>
+        <div id="cont_text">
+           <h2>Modelatge 3D</h2>
+            <div class="cont_display">
+        <img class="mySlides" src="../imatges/3d_modelatge_1.jpeg" alt="Mostra d'una feina" style="width:100%">
+        <img class="mySlides" src="../imatges/3d_modelatge_2.jpeg" alt="Mostra d'una altre de les feines" style="width:100%">
+        <img class="mySlides" src="images/" alt="Mostra d'alguna de les feines" style="width:100%">
+
+        <button class="boton-slider fletxaDreta-slider" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="boton-slider fletxaEsquerra-slider" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+      <h2>Il·luminació</h2>
+       <div class="cont_display">
+        <img class="mySlides1" src="../imatges/3d_modelatge_1.jpeg" alt="Mostra d'una feina" style="width:100%">
+        <img class="mySlides1" src="../imatges/3d_modelatge_2.jpeg" alt="Mostra d'una altre de les feines" style="width:100%">
+        <img class="mySlides1" src="images/" alt="Mostra d'alguna de les feines" style="width:100%">
+
+        <button class="boton-slider fletxaDreta-slider" onclick="plusDivs1(-1)">&#10094;</button>
+        <button class="boton-slider fletxaEsquerra-slider" onclick="plusDivs1(1)">&#10095;</button>
+    </div>
+        </div>
+    </div>
+    </body>
+</html>

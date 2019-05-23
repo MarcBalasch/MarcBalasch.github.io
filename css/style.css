@@ -1,0 +1,216 @@
+/*elements*/
+*{
+    background-color: black;
+    color: white;
+    font-family: 'Cabin Condensed', sans-serif;
+    letter-spacing: 1px;
+    
+}
+a{
+    text-decoration: none;
+}
+li{
+    display: inline;
+}
+h1{
+    font-size: 3em;
+    background-color: rgba(255,40,0,0);
+    margin: 5px auto;
+    width: 500px;
+    text-shadow: 0px 0px 7px #fff;
+    min-width: 500px;
+}
+p{
+    letter-spacing: 0.1em;
+    background-color: rgba(255,40,0,0);
+    margin: 5px auto;
+    width: 500px;
+    text-shadow: 0px 0px 7px #fff;
+    min-width: 500px;
+}
+h2{
+    text-decoration: underline;
+    text-decoration-color: coral;
+    margin: 5px auto;
+    background: 0;
+    text-shadow: 0px 0px 1px black;
+}
+#cont_text>h2{
+    text-align: center;
+}
+/*contenidors*/
+#cont_general{
+    display: block;
+    width:80%;
+    margin: 10px auto;
+    background-color: rgba(102,255,255,0.2);
+    padding: 20px;
+    border: 1px rgb(0,255,255) solid;
+    min-width: 500px;
+}
+#cont_xxss{
+    display: block;
+    margin: 5px;
+    padding: 5px;
+    border: 1.5px coral dashed;
+    background-color: rgba(255,40,0,0.5);
+    text-align: right;
+}
+#cont_menu{
+    display: flex;
+    border-bottom: 2px solid;
+    border-bottom-color: rgb(0,255,255);
+    width:100%;
+    margin: auto;
+    justify-content:space-around;
+    flex-flow: row nowrap;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    min-width: 500px;
+    z-index: 10;
+}
+#cont_nom{
+     display: block;
+    margin: 5px;
+    padding: 5px;
+    border: 1.5px coral dashed;
+    background-color: rgba(255,40,0,0.5);
+    text-align: center;
+    
+}
+#cont_img{
+    border: 1.5px white dashed;
+    margin: 5px auto;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+video{
+    width: 100%;
+}
+#cont_text{
+    display: block;
+    margin: 5px;
+    padding: 5px;
+    border: 1.5px white dashed;
+    background-color: rgba(255,40,0,0.3);
+}
+.cont_class{
+    display: block;
+    margin: 10px;
+    padding: 5px;
+    border: 1px rgb(0,255,255) dashed;
+    background-color: rgba(102,255,255,0.3);
+    border-radius: 5px;
+}
+/*slider*/
+.cont_display {
+        position: relative;
+        width: 48%;
+        /*indicador*/
+        margin: 5px auto;
+        border: 3px solid green;
+    min-width: 150px;
+    }
+    .boton-slider {
+        width: 30px;
+        height: 30px;
+        background-color: grey;
+    }
+
+    .boton-slider:hover {
+        width: 30px;
+        height: 30px;
+        background-color: ghostwhite;
+    }
+
+    .fletxaDreta-slider {
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        transform: translate(0%, -50%);
+        */
+    }
+
+    .fletxaEsquerra-slider {
+        position: absolute;
+        top: 50%;
+        right: 0%;
+        transform: translate(0%, -50%);
+    }
+
+
+    .mySlides {
+        display: none;
+    }
+.mySlides1{
+    display: none;
+}
+/*icones*/
+i{
+font-size: 30px;
+    letter-spacing: 5px;
+    color: white;
+    background-color: rgba(255,40,0,0);
+}
+i:hover{
+    color: rgb(102,255,255);
+    transition: all 0.5s cubic-bezier(0.2,0.19,0,0);
+}
+/*imatges*/
+.img1{
+    width: 100%;
+}
+.img2{
+    display: none;
+}
+@media only screen and (max-width:500px){
+    .img1{
+        display: none;
+    }
+    .img2{
+        display: block;
+        width: 100%;
+    }
+}
+/*apartats*/
+.menu_apa{
+     color: #fff !important;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0.5em 1.2em 15px;
+  background: #002366;
+  border: 2px solid;
+  border-color: #7DF9FF;
+  position: relative; 
+    text-shadow: 1px 1px 6px #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+        flex-basis: 200px;
+    margin: -2.2px;
+}
+.menu_apa:before{
+     content:"";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 0px;
+  background: rgba(255,255,255, 0.1);
+       border-top-left-radius: 10px;
+    border-top-right-radius: 10px; 
+  transition: all 1s ease;
+    color: #fff !important;
+    flex-basis: 200px;
+}
+.menu_apa:hover:before{
+    height: 100%;
+}
+/*escriptura*/
+p>a>i{
+    font-size: 20px;
+    letter-spacing: 0px;
+    color: coral;
+    text-shadow: 0px 0px 1px coral;
+}

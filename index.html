@@ -2,10 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Portfoli | Marc Balasch</title>
+    <title>Marc Balasch | Inici</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="imatges/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="imatges/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+<link rel="manifest" href="imatges/favicon/site.webmanifest">
+   <!--CSS+FontAwesome+Font-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!--JS-->
+    <script src="js/jquery.js"></script>
+    <script src="js/mediaelement-and-player.js"></script>
+    <link rel="stylesheet" href="css/mediaelementplayer.css">
+    <!--Plugins-->    
+     <script src="pluggins/skip-back-i18n.js"></script>    
+     <script src="pluggins/skip-back.js"></script>    
+     <link href="pluggins/skip-back.css" rel="stylesheet">
+     <script src="pluggins/speed-i18n.js"></script>    
+     <script src="pluggins/speed.js"></script>    
+     <link href="pluggins/speed.css" rel="stylesheet">    
+     <!---->
 </head>
 <body>
-    <h1>Marc Balasch</h1>
-    <p>Ey que pasa chavales aqui cosinando unos filetes de mi madre la tia mery joder</p>
+    <div id="cont_menu">
+        <ul>
+            <li><a href="index.html" class="menu_apa">Inici</a></li>
+            <li><a href="pages/cv.html" class="menu_apa">C.V.</a></li>
+            <li><a href="pages/mdf.html" class="menu_apa">Mostra de feines</a></li>
+            <li><a href="pages/cnt.html" class="menu_apa">Contacte</a></li>
+        </ul>
+    </div>
+       <div id="cont_general">
+        <div id="cont_xxss">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter-square"></i></a>
+        </div>
+        <div id="cont_nom">
+            <h1>Marc Balasch Blanch</h1>
+        </div>
+        <div id="cont_img">
+            <video controls width="720" height="480">    
+     <source src="videos/DR_Marc_Balasch.mp4" type="video/mp4">    
+     <source src="videos/DR_Marc_Balasch.webm" type="video/webm">
+            </video>
+        </div>
+       </div>
+       <script>
+   $('video').mediaelementplayer({  features: ['playpause', 'tracks', 'progress','skipback','speed'], skipBackInterval: 5, speeds: ['3.00','2.00','1.50', '1.25',{ name: 'Normal',value:'1.00'}, '0.75','0.50','0.25'] /*Definim l'ordre i els elements que es veuran al navegador*/ });
+        Language: 'cat';
+        alwaysShowHours: true;
+        timeFormat: 'h:mm:ss' ;
+    </script>
 </body>
 </html>
+
+
