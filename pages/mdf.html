@@ -11,14 +11,19 @@
   <script>
         var slideIndex1 = 1;
      var slideIndex = 1;
+      var slideIndex2 = 1;
         showDivs1(slideIndex1);
      showDivs(slideIndex);
+      showDivs2(slideIndex2);
 
         function plusDivs1(n1) {
             showDivs1(slideIndex1 += n1);
         }
      function plusDivs(n) {
             showDivs(slideIndex += n);
+        }
+       function plusDivs2(n2) {
+            showDivs2(slideIndex2 += n2);
         }
 
         function showDivs1(n1) {
@@ -49,8 +54,33 @@
             }
             x[slideIndex - 1].style.display = "block";
         }
+      function showDivs2(n2) {
+            var i;
+            var x = document.getElementsByClassName("mySlides2");
+            if (n2 > x.length) {
+                slideIndex2 = 1
+            }
+            if (n2 < 1) {
+                slideIndex2 = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex2 - 1].style.display = "block";
+        }
 
     </script>
+    <style>
+        .cont_class>ul>li{
+            margin: 5px;
+            background-color: rgba(0,0,0,0);
+        }
+        .cont_class{
+            display: flex;
+    justify-content:space-evenly;
+    flex-flow: row nowrap;
+        }
+    </style>
 <body>
    <img id="background" src="../imatges/background/background.jpg">
     <div id="cont_menu">
@@ -70,20 +100,42 @@
             <h1>Mostra de feines</h1>
         </div>
         <div id="cont_text">
-           <h2>Modelatge 3D</h2>
+         <div class="cont_class">
+             <ul>
+                 <li><a href="#programming">Programació</a></li>
+                 <li><a href="#modeling_3d">Modelatge 3D</a></li>
+                 <li><a href="#ilumination">Il·luminació</a></li> 
+             </ul>
+         </div>
+          <h2 id="programming">Programació</h2>
             <div class="cont_display">
-        <img class="mySlides" src="../imatges/3d_modelatge_1.jpeg" alt="Mostra d'una feina" style="width:100%">
-        <img class="mySlides" src="../imatges/3d_modelatge_2.jpeg" alt="Mostra d'una altre de les feines" style="width:100%">
-        <img class="mySlides" src="images/" alt="Mostra d'alguna de les feines" style="width:100%">
+        <img class="mySlides2" src="../imatges/programing/processing_1.JPG" alt="Pantalla inicial del joc 'Pong' fet per mi al programa Processing" style="width:100%">
+        <img class="mySlides2" src="../imatges/programing/processing_2.JPG" alt="Mode de joc de 2 jugadors del joc 'Pong' fet per mi al programa Processing" style="width:100%">
+        <img class="mySlides2" src="../imatges/programing/processing_6.JPG" alt="Primera vista del codi de programació del joc 'Pong' fet per mi al programa Processing" style="width:100%">
+        <img class="mySlides2" src="../imatges/programing/processing_4.JPG" alt="Pantalla inicial del joc 'Cowboy Hunt', adaptació a l'oest del joc 'Space Invaders', fet pel meu equip i jo al programa Processing" style="width:100%">
+        <img class="mySlides2" src="../imatges/programing/processing_5.JPG" alt="Ingame del joc 'Cowboy Hunt', adaptació a l'oest del joc 'Space Invaders', fet pel meu equip i jo al programa Processing" style="width:100%">
+
+        <button class="boton-slider fletxaDreta-slider" onclick="plusDivs2(-1)">&#10094;</button>
+        <button class="boton-slider fletxaEsquerra-slider" onclick="plusDivs2(1)">&#10095;</button>
+    </div>
+           <h2 id="modeling_3d">Modelatge 3D</h2>
+            <div class="cont_display">
+        <img class="mySlides" src="../imatges/3d_modelatge_1.jpeg" alt="Mostra d'una arma de foc 'ACR' feta amb el programa Maya 2017" style="width:100%">
+        <img class="mySlides" src="../imatges/3d_modelatge_2.jpeg" alt="Mostra d'una bicicleta feta amb el programa Maya 2017" style="width:100%">
+        <img class="mySlides" src="../imatges/3d_modelatge_3.jpeg" alt="Mostra d'una galleda feta amb el programa Maya 2017" style="width:100%">
 
         <button class="boton-slider fletxaDreta-slider" onclick="plusDivs(-1)">&#10094;</button>
         <button class="boton-slider fletxaEsquerra-slider" onclick="plusDivs(1)">&#10095;</button>
     </div>
-      <h2>Il·luminació</h2>
+      <h2 id="ilumination">Il·luminació</h2>
        <div class="cont_display">
-        <img class="mySlides1" src="../imatges/3d_modelatge_1.jpeg" alt="Mostra d'una feina" style="width:100%">
-        <img class="mySlides1" src="../imatges/3d_modelatge_2.jpeg" alt="Mostra d'una altre de les feines" style="width:100%">
-        <img class="mySlides1" src="images/" alt="Mostra d'alguna de les feines" style="width:100%">
+        <img class="mySlides1" src="../imatges/ilumination/img_ombra_sense_opac_i_z.jpg" alt="Render d'uns gots de vidre, fets amb el programa Maya 2018" style="width:100%">
+        <img class="mySlides1" src="../imatges/ilumination/img_prop_1.jpg" alt="Render d'una pantalla d'ordinador que emet llum, fet amb el programa Maya 2018" style="width:100%">
+        <img class="mySlides1" src="../imatges/ilumination/llum_dar.jpeg" alt="Render d'una estatua amb el reflexe d'una llum al fons, fet amb el programa Maya 2018" style="width:100%">
+        <img class="mySlides1" src="../imatges/ilumination/llum_imp.jpeg" alt="Render d'un dinosaure amb la ombra d'una dentadura, fet amb el programa Maya 2018" style="width:100%">
+        <img class="mySlides1" src="../imatges/ilumination/llum_sil.jpeg" alt="Render d'una silueta d'una mà, fet amb el programa Maya 2018" style="width:100%">
+        <img class="mySlides1" src="../imatges/ilumination/render_q3.jpeg" alt="Render d'unes veles amb una llum gegant a sobre d'aquestes, fet amb el programa Maya 2018" style="width:100%">
+        <img class="mySlides1" src="../imatges/ilumination/silueta.jpeg" alt="Render d'una silueta bàsica d'una rata, fet amb el programa Maya 2018" style="width:100%">
 
         <button class="boton-slider fletxaDreta-slider" onclick="plusDivs1(-1)">&#10094;</button>
         <button class="boton-slider fletxaEsquerra-slider" onclick="plusDivs1(1)">&#10095;</button>

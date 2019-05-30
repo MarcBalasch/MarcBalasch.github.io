@@ -6,9 +6,15 @@
     letter-spacing: 1px;
     
 }
+video{
+    display:block;
+}
 a{
     text-decoration: none;
 }
+ul{
+            background-color: rgba(0,0,0,0);
+        }
 li{
     display: inline;
 }
@@ -93,6 +99,7 @@ h2{
     display: flex;
     justify-content: center;
     padding: 20px;
+    flex-wrap: wrap;
 }
 video{
     width: 100%;
@@ -118,7 +125,7 @@ video{
         width: 90%;
         /*indicador*/
         margin: 5px auto;
-        border: 3px solid green;
+        border: 3px solid cyan;
     min-width: 150px;
     }
     .boton-slider {
@@ -153,6 +160,9 @@ video{
         display: none;
     }
 .mySlides1{
+    display: none;
+}
+.mySlides2{
     display: none;
 }
 /*icones*/
