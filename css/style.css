@@ -115,7 +115,7 @@ video{
 /*slider*/
 .cont_display {
         position: relative;
-        width: 48%;
+        width: 90%;
         /*indicador*/
         margin: 5px auto;
         border: 3px solid green;
