@@ -12,9 +12,11 @@
         var slideIndex1 = 1;
      var slideIndex = 1;
       var slideIndex2 = 1;
+            var slideIndex3 = 1;
         showDivs1(slideIndex1);
      showDivs(slideIndex);
       showDivs2(slideIndex2);
+        showDivs3(slideIndex3);
 
         function plusDivs1(n1) {
             showDivs1(slideIndex1 += n1);
@@ -24,6 +26,9 @@
         }
        function plusDivs2(n2) {
             showDivs2(slideIndex2 += n2);
+        }
+      function plusDivs3(n3) {
+            showDivs3(slideIndex3 += n3);
         }
 
         function showDivs1(n1) {
@@ -68,6 +73,20 @@
             }
             x[slideIndex2 - 1].style.display = "block";
         }
+      function showDivs3(n3) {
+            var i;
+            var x = document.getElementsByClassName("mySlides3");
+            if (n3 > x.length) {
+                slideIndex3 = 1
+            }
+            if (n3 < 1) {
+                slideIndex3 = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex3 - 1].style.display = "block";
+        }
 
     </script>
     <style>
@@ -94,7 +113,7 @@
        <div id="cont_general">
         <div id="cont_xxss">
                 <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter-square"></i></a>
+                
         </div>
         <div id="cont_nom">
             <h1>Mostra de feines</h1>
@@ -103,6 +122,7 @@
          <div class="cont_class">
              <ul>
                  <li><a href="#programming">Programació</a></li>
+                 <li><a href="#photoshop">Photoshop</a></li>
                  <li><a href="#modeling_3d">Modelatge 3D</a></li>
                  <li><a href="#ilumination">Il·luminació</a></li> 
              </ul>
@@ -117,6 +137,16 @@
 
         <button class="boton-slider fletxaDreta-slider" onclick="plusDivs2(-1)">&#10094;</button>
         <button class="boton-slider fletxaEsquerra-slider" onclick="plusDivs2(1)">&#10095;</button>
+    </div>
+          <h2 id="photoshop">Photoshop</h2>
+       <div class="cont_display">
+        <img class="mySlides3" src="../imatges/photoshop/corre_hielo.png" alt="Treball fet amb el programa Photoshop" style="width:100%">
+        <img class="mySlides3" src="../imatges/photoshop/radio_Marc_Balasch.png" alt="Treball fet amb el programa Photoshop" style="width:100%">
+        <img class="mySlides3" src="../imatges/photoshop/Paisatge_Marc_Balasch.png" alt="Treball fet amb el programa Photoshop" style="width:100%">
+        <img class="mySlides3" src="../imatges/photoshop/corre_fuego.png" alt="Treball fet amb el programa Photoshop" style="width:100%">
+
+        <button class="boton-slider fletxaDreta-slider" onclick="plusDivs3(-1)">&#10094;</button>
+        <button class="boton-slider fletxaEsquerra-slider" onclick="plusDivs3(1)">&#10095;</button>
     </div>
            <h2 id="modeling_3d">Modelatge 3D</h2>
             <div class="cont_display">
@@ -140,6 +170,7 @@
         <button class="boton-slider fletxaDreta-slider" onclick="plusDivs1(-1)">&#10094;</button>
         <button class="boton-slider fletxaEsquerra-slider" onclick="plusDivs1(1)">&#10095;</button>
     </div>
+       
         </div>
     </div>
     </body>

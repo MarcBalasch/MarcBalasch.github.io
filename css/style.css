@@ -166,6 +166,9 @@ video{
 .mySlides2{
     display: none;
 }
+.mySlides3{
+    display: none;
+}
 /*icones*/
 i{
 font-size: 30px;
